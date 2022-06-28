@@ -122,3 +122,9 @@ npx sequelize-cli seed:generate --name demo-pessoa
 ```
 npx sequelize-cli db:seed:all
 ```
+
+- ***api/index.js*** é o ponto de entrada da aplicação, onde iniciamos o servidor e chamamos a biblioteca Express para gerenciar as rotas da API.
+
+- ***api/models/index.js*** é o arquivo que gerencia todos os modelos da pasta models e é atraveś dele que o Sequelize conecta os modelos ao banco de dados de acordo com o ambiente escolhido (durante o projeto estamos trabalhando com o ambiente 'development', de desenvolvimento.
+
+- ***api/routes/index.js*** é o ponto de entrada que gerencia os arquivos de rotas, importa os métodos de cada arquivo api/routes/[arquivo] através dos require e chama estes métodos de acordo com a rota acessada pelo usuário.
