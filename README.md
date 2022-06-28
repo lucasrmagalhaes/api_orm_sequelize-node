@@ -33,3 +33,20 @@ npm install sequelize sequelize-cli path
 ```
 npx sequelize-cli init
 ```
+
+***XAMPP***
+```
+cd c:\xampp\mysql\bin
+```
+
+```
+mysql.exe -u root -p
+```
+
+```
+show databases;
+```
+
+```
+CREATE DATABASE escola_ingles;
+```
