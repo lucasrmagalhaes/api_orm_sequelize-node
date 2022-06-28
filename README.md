@@ -82,3 +82,23 @@ npx sequelize-cli model:create --name Pessoas --attributes nome:string,ativo:boo
 - Rastrear (e reverter) alterações feitas no banco para debugar conflitos e erros.
 
 ***freezeTableName:*** “congelar” o nome da tabela, assim o Sequelize não vai tentar pluralizar.
+
+***Rodando as migrates***
+```
+npx sequelize-cli db:migrate
+```
+
+***Utilizar o db: escola_ingles***
+```
+use escola_ingles;
+```
+
+***Listar as tabelas***
+```
+show tables;
+```
+
+***Ver colunas da tabela Pessoas***
+```
+describe Pessoas;
+```
