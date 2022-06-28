@@ -128,3 +128,20 @@ npx sequelize-cli db:seed:all
 - ***api/models/index.js*** é o arquivo que gerencia todos os modelos da pasta models e é atraveś dele que o Sequelize conecta os modelos ao banco de dados de acordo com o ambiente escolhido (durante o projeto estamos trabalhando com o ambiente 'development', de desenvolvimento.
 
 - ***api/routes/index.js*** é o ponto de entrada que gerencia os arquivos de rotas, importa os métodos de cada arquivo api/routes/[arquivo] através dos require e chama estes métodos de acordo com a rota acessada pelo usuário.
+
+***Criando o Modelo da Tabela Niveis***
+```
+npx sequelize-cli model:create --name Niveis --attributes descr_nivel:string
+```
+
+***Criando o Modelo da Tabela Turmas***
+```
+npx sequelize-cli model:create --name Turmas --attributes data_inicio:dateonly
+```
+
+***Criando o Modelo da Tabela Matriculas***
+```
+npx sequelize-cli model:create --name Matriculas --attributes status:string
+```
+
+***Criar tabelas com o nome no Plural, e priorizar na ordem de criação, tabelas sem FK.***
