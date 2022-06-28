@@ -102,3 +102,23 @@ show tables;
 ```
 describe Pessoas;
 ```
+
+***Inserindo dados***
+```
+insert into Pessoas (nome, ativo, email, role, createdAt, updatedAt) values ("Lucas", 1, "lucas@gmail.com", "estudante", NOW(), NOW());
+```
+
+***Dados da tabela Pessoas***
+```
+select * from Pessoas;
+```
+
+***Criando um seed***
+```
+npx sequelize-cli seed:generate --name demo-pessoa
+```
+
+***Rodando o seed***
+```
+npx sequelize-cli db:seed:all
+```
