@@ -72,3 +72,11 @@ CREATE DATABASE escola_ingles;
 ```
 npx sequelize-cli model:create --name Pessoas --attributes nome:string,ativo:boolean,email:string,role:string
 ```
+
+***Migração em SQL***
+- Migração de dados: transferência de dados entre plataformas.
+- Migração com ORM: alterações incrementais e rastreáveis no banco.
+
+***Mudanças no Esquema***
+- Coordenar alterações feitas por diferentes pessoas no time nas tabelas do banco.
+- Rastrear (e reverter) alterações feitas no banco para debugar conflitos e erros.
