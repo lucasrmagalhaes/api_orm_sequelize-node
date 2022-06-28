@@ -160,3 +160,13 @@ npx sequelize-cli seed:generate --name demo-turmas
 ```
 npx sequelize-cli seed:generate --name demo-matriculas
 ```
+
+***Verificar versões***
+```
+npm outdated
+```
+
+***Atualizar versões***
+```
+npm update
+```
