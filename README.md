@@ -170,3 +170,8 @@ npm outdated
 ```
 npm update
 ```
+
+***Alterando a tabela Pessoas***
+```
+alter table Pessoas add colomun deletedAt datetime after updatedAt;
+```
