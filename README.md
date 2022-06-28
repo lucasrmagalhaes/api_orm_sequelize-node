@@ -145,3 +145,18 @@ npx sequelize-cli model:create --name Matriculas --attributes status:string
 ```
 
 ***Criar tabelas com o nome no Plural, e priorizar na ordem de criação, tabelas sem FK.***
+
+***Seed demo-nivel***
+```
+npx sequelize-cli seed:generate --name demo-nivel
+```
+
+***Seed demo-turmas***
+```
+npx sequelize-cli seed:generate --name demo-turmas
+```
+
+***Seed demo-matriculas***
+```
+npx sequelize-cli seed:generate --name demo-matriculas
+```
