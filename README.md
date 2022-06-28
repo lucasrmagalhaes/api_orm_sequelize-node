@@ -1,2 +1,15 @@
-# api_sequelize-node
-ORM com NodeJS: API com Sequelize e MySQL
+```
+npm init -y
+```
+
+```
+npm install express
+```
+
+```
+npm install body-parser
+```
+
+```
+node api/index.js
+```
