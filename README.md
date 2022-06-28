@@ -67,3 +67,8 @@ CREATE DATABASE escola_ingles;
 - ORMs oferecem uma interface única, que pode ser utilizada para vários bancos de dados relacionais diferentes;
 - Ajudam o time a ganhar agilidade no desenvolvimento das aplicações; e
 - Esta interface única “esconde” as especificidades dos diversos bancos relacionais, diminuindo a complexidade do código.
+
+***Criação da Modelo Pessoas***
+```
+npx sequelize-cli model:create --name Pessoas --attributes nome:string,ativo:boolean,email:string,role:string
+```
