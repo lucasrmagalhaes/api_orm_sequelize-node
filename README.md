@@ -80,3 +80,5 @@ npx sequelize-cli model:create --name Pessoas --attributes nome:string,ativo:boo
 ***Mudanças no Esquema***
 - Coordenar alterações feitas por diferentes pessoas no time nas tabelas do banco.
 - Rastrear (e reverter) alterações feitas no banco para debugar conflitos e erros.
+
+***freezeTableName:*** “congelar” o nome da tabela, assim o Sequelize não vai tentar pluralizar.
