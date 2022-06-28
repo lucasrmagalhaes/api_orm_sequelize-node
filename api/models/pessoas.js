@@ -26,6 +26,11 @@ module.exports = (sequelize, DataTypes) => {
     defaultScope: {
       where: {
         ativo: true
+      },
+    },
+    scopes: {
+      todos: {
+        where: {}
       }
     }
   });
