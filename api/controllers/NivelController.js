@@ -1,72 +1,72 @@
 const database = require('../models');
 
-class PessoaController {
-    static async pegaTodasAsPessoas(req, res) {
+class NivelController {
+    static async pegaTodosOsNiveis(req, res) {
         try {
-            const todasAsPessos = await database.Pessoas.findAll();
+            const todosOsNiveis = await database.Niveis.findAll()
 
-            return res.status(200).json(todasAsPessos);
+            return res.status(200).json(todosOsNiveis)
         } catch (error) {
             return res.status(500).json(error.message);
         }
     }
 
-    static async pegaUmaPessoa(req, res) {
+    static async pegaUmNivel(req, res) {
         const { id } = req.params;
 
         try {
-            const umaPessoa = await database.Pessoas.findOne({
+            const umNivel = await database.Niveis.findOne({
                 where: { 
                     id: Number(id)
                 }
             });
 
-            return res.status(200).json(umaPessoa);
+            return res.status(200).json(umNivel);
         } catch (error) {
             return res.status(500).json(error.message);
         }
     }
 
-    static async criaPessoa(req, res) {
-        const novaPessoa = req.body;
+    static async criaNivel(req, res) {
+        const novoNivel = req.body;
 
         try {
-            const novaPessoaCriada = await database.Pessoas.create(novaPessoa);
+            const novoNivelCriado = await database.Niveis.create(novoNivel);
             
-            return res.status(200).json(novaPessoaCriada);
+            return res.status(200).json(novoNivelCriado);
         } catch (error) {
             return res.status(500).json(error.message);
         }
     }
 
-    static async atualizaPessoa(req, res) {
+    static async atualizaNivel(req, res) {
         const { id } = req.params;
         const novasInfos = req.body;
 
         try {
-            await database.Pessoas.update(novasInfos, {
+            await database.Niveis.update(novasInfos, {
                 where: {
                     id: Number(id)
                 }
             });
             
-            const pessoaAtualizada = await database.Pessoas.findOne({
+            const nivelAtualizado = await database.Niveis.findOne({
                 where: { 
                     id: Number(id)
                 }
             });
 
-            return res.status(200).json(pessoaAtualizada);
+            return res.status(200).json(nivelAtualizado);
         } catch (error) {
             return res.status(500).json(error.message);
         }
     }
 
-    static async apagaPessoa(req, res) {
+    static async apagaNivel(req, res) {
         const { id } = req.params;
 
         try {
-            await database.Pessoas.destroy({
+            await database.Niveis.destroy({
                 where: { 
                     id: Number(id)
                 }
@@ -79,4 +79,4 @@ class PessoaController {
     }
 }
 
-module.exports = PessoaController;
+module.exports = NivelController;
