@@ -4,6 +4,7 @@
   "description": "```\r npm init -y\r ```",
   "main": "./api/index.js",
   "scripts": {
+    "start": "nodemon ./api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,13 @@
   "homepage": "https://github.com/lucasrmagalhaes/api_sequelize-node#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.21.1",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
   }
 }
