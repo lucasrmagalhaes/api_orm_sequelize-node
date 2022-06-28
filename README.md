@@ -175,3 +175,9 @@ npm update
 ```
 alter table Pessoas add colomun deletedAt datetime after updatedAt;
 ```
+
+- Qualquer alteração na estrutura do banco feita através de acesso direto ao banco (via terminal, por exemplo), sem o uso de uma migração, não é indexada/rastreável.
+- Migrações com ORM são úteis para coordenar alterações feitas por diferentes pessoas nas tabelas do banco.
+- Migração em SQL é a transferência de dados entre plataformas/ambientes SQL.
+- As alterações feitas no banco via migrações podem ser rastreadas e revertidas para debugar conflitos e erros.
+- Migração com ORM é o processo de documentar e rastrear mudanças em um banco de dados.
