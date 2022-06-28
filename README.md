@@ -181,3 +181,8 @@ alter table Pessoas add colomun deletedAt datetime after updatedAt;
 - Migração em SQL é a transferência de dados entre plataformas/ambientes SQL.
 - As alterações feitas no banco via migrações podem ser rastreadas e revertidas para debugar conflitos e erros.
 - Migração com ORM é o processo de documentar e rastrear mudanças em um banco de dados.
+
+- Validações feitas no front-end são muito úteis para melhorar a experiência de quem utiliza a aplicação, mas não substituem a validação no back-end.
+- Validações feitas no back-end devem ser levadas em conta nos custos de hospedagem em nuvem, pois é preciso fazer a requisição para então ser validada.
+- As validações feitas no front-end são mais fáceis de serem burladas por pessoas mal-intencionadas.
+- Uma vez que a API é disponibilizada para o front-end, não é possível garantir que a requisição esteja realmente sendo enviada pela aplicação, então, por segurança, ela também deve ser feita no back-end.
