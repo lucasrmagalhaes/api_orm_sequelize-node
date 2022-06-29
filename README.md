@@ -186,3 +186,7 @@ alter table Pessoas add colomun deletedAt datetime after updatedAt;
 - Validações feitas no back-end devem ser levadas em conta nos custos de hospedagem em nuvem, pois é preciso fazer a requisição para então ser validada.
 - As validações feitas no front-end são mais fáceis de serem burladas por pessoas mal-intencionadas.
 - Uma vez que a API é disponibilizada para o front-end, não é possível garantir que a requisição esteja realmente sendo enviada pela aplicação, então, por segurança, ela também deve ser feita no back-end.
+
+- Transações servem para garantir a consistência dos dados em um banco; no fim de cada transação, todos os dados devem estar em um estado consistente.
+- O gerenciamento de transações pode ser feito pelo Sequelize através do método .transaction().
+- Uma transação é uma única operação e deve ser completada com todas as modificações de dados, ou nenhuma modificação é feita.
