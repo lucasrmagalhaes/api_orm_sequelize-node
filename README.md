@@ -190,3 +190,9 @@ alter table Pessoas add colomun deletedAt datetime after updatedAt;
 - Transações servem para garantir a consistência dos dados em um banco; no fim de cada transação, todos os dados devem estar em um estado consistente.
 - O gerenciamento de transações pode ser feito pelo Sequelize através do método .transaction().
 - Uma transação é uma única operação e deve ser completada com todas as modificações de dados, ou nenhuma modificação é feita.
+
+- Os serviços podem herdar e se conectar entre si, independente das outras camadas. Por exemplo: ProdutoServices.js pode utilizar métodos das classes FornecedorServices.js e herdar métodos a partir de uma classe Services mais genérica.
+- A separação entre serviços e controladores ajuda a aplicação a ficar mais modular, fácil de se atualizar e dar manutenção.
+- A camada de serviços passa a ser a única com acesso aos modelos, tirando essa responsabilidade dos controladores.
+- É uma boa prática conectar um controlador somente ao seu próprio serviço. Por exemplo: ProdutoController.js apenas importar e utilizar métodos que venham de ProdutoServices.js.
+- Após a separação, a responsabilidade do serviço é se conectar aos modelos através dos métodos de query do Sequelize; já os controladores recebem as chamadas das rotas, passam para os serviços as informações necessárias e fazem os tratamentos de dados nos retornos.
