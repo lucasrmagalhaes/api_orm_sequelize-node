@@ -8,6 +8,12 @@ class Services {
     async pegaTodosOsRegistros() {
         return database[this.nomeDoModelo].findAll();
     }
+
+    async pegaUmRegistro() {
+        return database[this.nomeDoModelo].findOne();
+    }
+
+    
 }
 
 module.exports = Services;
