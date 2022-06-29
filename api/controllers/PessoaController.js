@@ -188,11 +188,13 @@ class PessoaController {
         const { estudanteId } = req.params;
 
         try {
-            const matriculas = await database.Matriculas.findAll({
-                where: { 
-                    estudante_id: Number(estudanteId)
+            const pessoa = await database.Pessoas.findOne({
+                where: {
+                    id: Number(estudanteId)
                 }
             });
+
+            const matriculas = await pessoa.getAulasMatriculadas();
             
             return res.status(200).json(matriculas);
         } catch (error) {
